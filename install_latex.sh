@@ -6,7 +6,7 @@ eval "$(/usr/libexec/path_helper)"
 # Update $PATH to include `/usr/local/texlive/2022basic/bin/universal-darwin`
 sudo tlmgr update --self
 sudo tlmgr install texliveonfly
-sudo tlmgr install xelatex
+sudo tlmgr install tikzfill
 sudo tlmgr install adjustbox
 sudo tlmgr install tcolorbox
 sudo tlmgr install collectbox
