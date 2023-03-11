@@ -25,7 +25,8 @@ Install it:
 `sudo tlmgr install tikzfill`
 and add to [[install_latex.sh]]
 
-Photo:
+Photo: It is generally not necessary to include a photo in your CV unless it is specifically requested by the employer. In some countries, including a photo in a job application can be common practice, but in others, it may be seen as unprofessional or even discriminatory.
+To include, uncomment [line 54](examples/cv.tex)
 -------------
 No photo: US, GB, Ireland  
 With photo: Scandinavia  
