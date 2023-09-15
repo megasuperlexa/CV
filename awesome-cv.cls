@@ -273,6 +273,10 @@
 % Usage: \homepage{<url>}
 \newcommand*{\homepage}[1]{\def\@homepage{#1}}
 
+% Defines writer's whatsapp (optional)
+% Usage: \whatsapp{<whatsapp-qr>}
+\newcommand*{\whatsapp}[1]{\def\@whatsapp{#1}}
+
 % Defines writer's github (optional)
 % Usage: \github{<github-nick>}
 \newcommand*{\github}[1]{\def\@github{#1}}
@@ -487,6 +491,12 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{http://\@homepage}{\faHome\acvHeaderIconSep\@homepage}%
+        }%
+      \ifthenelse{\isundefined{\@whatsapp}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://wa.me/qr/\@whatsapp}{\faWhatsappSquare\acvHeaderIconSep whatsapp}%
         }%
       \ifthenelse{\isundefined{\@github}}%
         {}%
