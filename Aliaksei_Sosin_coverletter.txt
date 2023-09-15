@@ -1,0 +1,28 @@
++---------------------------------------+---------------------------------------------------------+
+| Job Application for Software Engineer |                                                         |
++---------------------------------------+                                                         |
+|                                                                                                 |
+| Dear HR,                                                                                        |
+| I am a skilled Software Engineer with over 20 years of experience in backend development,       |
+| .NET, client/server, and distributed systems.                                                   |
+| I have worked with both relational and NoSQL databases and have experience with various         |
+| programming languages, including C# and Bash.                                                   |
+|                                                                                                 |
+| I have worked with companies of all sizes, ranging from small teams to large organizations      |
+| in the financial and gaming industries. I am particularly proud of my work reducing operational |
+| costs by approximately $2M/year by moving a high-load gaming backend with 600,000 daily active  |
+| users from AWS to private data centers under Kubernetes+Netflix stack.                          |
+|                                                                                                 |
+| In addition, I have experience with observability tools such as ELK, Grafana, and Dynatrace,    |
+| and have experience in DevOps tools such as AWS, Docker, Kubernetes, Jenkins, and TeamCity.     |
+| I am also interested in modern microservice architectures, functional approaches in coding,     |
+| and studying Golang.                                                                            |
+|                                                                                                 |
+| I would be thrilled to bring my expertise and experience to your organization.                  |
+| Please find my attached resume for your review.                                                 |
+|                                                                                                 |
+| Thank you for your consideration.                                                               |
+|                                                                                                 |
+| Sincerely,                                                                                      |
+| Aliaksei Sosin                                                                                  |
++-------------------------------------------------------------------------------------------------+
