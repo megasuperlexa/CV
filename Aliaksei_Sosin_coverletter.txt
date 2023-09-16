@@ -1,6 +1,6 @@
-+---------------------------------------+---------------------------------------------------------+
-| Job Application for Software Engineer |                                                         |
-+---------------------------------------+                                                         |
++------------------------------------------------+------------------------------------------------+
+| Job Application for Software Engineer position |                                                |
++------------------------------------------------+                                                |
 |                                                                                                 |
 | Dear HR,                                                                                        |
 | I am a skilled Software Engineer with over 20 years of experience in backend development,       |
