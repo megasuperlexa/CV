@@ -3,8 +3,10 @@ brew install pandoc
 brew tap homebrew/cask
 brew install --cask basictex
 eval "$(/usr/libexec/path_helper)"
-# Update $PATH to include `/usr/local/texlive/2022basic/bin/universal-darwin`
+# Update $PATH to include `/usr/local/texlive/YYYYbasic/bin/universal-darwin` (e.g. 2025basic)
 sudo tlmgr update --self
+# Required by tcolorbox 6.9+ for PDF tagging (avoids "Undefined control sequence" for \NewStructureName etc.)
+sudo tlmgr install tagpdf
 sudo tlmgr install texliveonfly
 sudo tlmgr install tikzfill
 sudo tlmgr install adjustbox

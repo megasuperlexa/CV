@@ -6,6 +6,8 @@ Had no luck with the docker approach in the base repo, so install latex locally 
 To install latex+packages run `install_latex.sh`  
 It installs minimal latex basictex plus some packages used in this proj.  
 And additionally something else ) took it from Jupiter notebook guys
+If you see **"Undefined control sequence"** (e.g. `\NewStructureName`) and **"Missing \begin{document}"** in `examples/cv.log`, this is usually because **tcolorbox** 6.9+ (TeX Live 2025) needs the **tagpdf** package and BasicTeX does not include it. Fix: `sudo tlmgr install tagpdf` (and re-run `install_latex.sh` to add it for future installs).
+
 If errors like:
 ```
 ! LaTeX Error: File 'tikzfill.image.sty' not found.

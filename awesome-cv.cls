@@ -77,6 +77,21 @@
 \RequirePackage{roboto}
 \RequirePackage[default,opentype]{sourcesanspro}
 % Needed for the photo ID
+% tcolorbox 6.9+ uses tagpdf commands; tagpdf is pdfLaTeX/LuaLaTeX-oriented and not
+% loaded by default with XeLaTeX. Provide no-op fallbacks so tcolorbox loads without error.
+\@ifundefined{NewStructureName}{%
+  \def\NewStructureName#1{}%
+  \def\AssignStructureRole#1#2{}%
+  \def\NewTaggingSocket#1#2{}%
+  \long\def\NewTaggingSocketPlug#1#2#3{}%
+  \def\AssignTaggingSocketPlug#1#2{}%
+  \def\UseStructureName#1{}%
+  \long\def\tagstructbegin#1{}%
+  \def\tagstructend{}%
+  \def\tagpdfparaOff#1{#1}%
+  % Gobble 1 arg only; 3-arg form used when drawing tcolorbox (e.g. photo). If you add \photo, you may need tagpdf.
+  \def\UseTaggingSocket#1{}%
+}{}
 \RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
