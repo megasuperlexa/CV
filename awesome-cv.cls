@@ -41,6 +41,8 @@
 }
 \ProcessOptions\relax
 \LoadClass{article}
+% No section numbers (removes big number in left margin next to cvsection/cventry)
+\setcounter{secnumdepth}{-1}
 
 
 %-------------------------------------------------------------------------------
@@ -665,6 +667,7 @@
 }
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
+% (Description in full-width block below tabular to avoid \multicolumn printing "2" in margin.)
 \newcommand*{\cventry}[5]{%
   \vspace{2.5mm}
   \setlength\tabcolsep{0pt}
@@ -674,8 +677,9 @@
       {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}%
+  \par\noindent
+  \descriptionstyle{#5}%
   \vspace{0.5mm}
 }
 
