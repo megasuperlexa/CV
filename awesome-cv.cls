@@ -312,6 +312,13 @@
 %       would be \stackoverflow{123456}{sam-smith}
 \newcommand*{\stackoverflow}[2]{\def\@stackoverflowid{#1}\def\@stackoverflowname{#2}}
 
+% Defines writer's CV PDF link (optional, full URL to online CV)
+% Usage: \cvpdf{<url>} or \cvpdf[<display text>]{<url>}
+\newcommand*{\cvpdf}[2][]{%
+  \def\@cvpdfurl{#2}%
+  \ifthenelse{\equal{#1}{}}{\def\@cvpdfdisplay{CV}}{\def\@cvpdfdisplay{#1}}%
+}
+
 % Defines writer's linked-in (optional)
 % Usage: \linkedin{<linked-in-nick>}
 \newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
@@ -520,6 +527,12 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://github.com/\@github}{\faGithubSquare\acvHeaderIconSep\@github}%
+        }%
+      \ifthenelse{\isundefined{\@cvpdfurl}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{\@cvpdfurl}{\faFilePdf\acvHeaderIconSep\@cvpdfdisplay}%
         }%
       \ifthenelse{\isundefined{\@gitlab}}%
         {}%
